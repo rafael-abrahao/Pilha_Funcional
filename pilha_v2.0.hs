@@ -18,7 +18,7 @@ getlista :: (a, [a]) -> [a]
 getlista (val, list) = list
 
 pop_loop :: Int -> [a] -> [a]
-pop_loop qtd pilha = drop qtd pilha
+pop_loop qtd pilha = reverse (drop qtd (reverse pilha))
 
 topo :: [a] -> a
 topo pilha = last pilha
